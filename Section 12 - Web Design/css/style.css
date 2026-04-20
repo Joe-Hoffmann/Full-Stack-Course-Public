@@ -1,0 +1,58 @@
+/* Color Pallete Here
+https://colorhunt.co/palette/f9efdbebd9b49dbc98638889 */
+
+body {
+    background-color: #EBD9B4;
+}
+
+.blue-back {
+    background-color: #638889 !important;
+}
+
+.nav-bar {
+    background-color: #638889;
+    max-width: 100%;
+}
+
+.page-width {
+    max-width: 100%;
+}
+
+.nav-link{
+    color: #F9EFDB !important;
+}
+
+.nav-link:hover {
+    color: #EBD9B4 !important;
+}
+
+.new-colors,
+.new-colors:active {
+    color: #F9EFDB !important;
+    border-color: #F9EFDB !important;
+    background-color: #9DBC98 !important;
+}
+
+.new-colors:hover{
+    color: #9DBC98 !important;
+    border-color: #F9EFDB !important;
+    background-color: #F9EFDB !important;
+}
+
+.round-corners {
+    border-radius: 15%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #638889 !important;
+}
+
+.border-bottom-blue {
+    border-bottom-color: #638889 !important;
+}
+
+.round-25 {
+    border-radius: 25%;
+    background-color: #EBD9B4 !important;
+}
+

@@ -1,0 +1,26 @@
+/* Write your code here: */
+
+h1, h2 { 
+    color: blueviolet;
+}
+
+/* Child selector
+Can be done with elements like so: div > p 
+ or with ID's or classes, also both dont have to be the same*/
+.box > .done {
+    color: firebrick;
+}
+
+/* Decendant selector */
+.box li {
+    color: blue;
+}
+
+/* Chaining selector */
+li.done{
+    color: seagreen;
+}
+
+ul p.done{
+    font-size: .5rem;
+}

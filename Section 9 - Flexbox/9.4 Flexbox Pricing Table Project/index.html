@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flexbox Pricing Table</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Sono", sans-serif;
+      }
+      .pricing-container {
+        display: flex;
+        justify-content: center; /* Centers the content along the main axis of the flexbox */
+        align-items: center; /* Centers the content along the cross axis of the flexbox*/
+        height: 100vh; /* Setting this helps center the box on the screen otherwise the flexbox just takes enough room in the window for the containers height and width wise*/
+        gap: 2rem; /* Sets a gap between each container in the flexbox*/
+      }
+      .pricing-plan {
+        background-color:gainsboro;
+        padding: 20px;
+        flex-basis: 400px; /* Setting the width of the box */
+        min-width: 300px; /* Setting minimum width for the box */
+        text-align: center; /* Aligning all the text in the box down the center */
+      }
+      .plan-title {
+        font-weight: bold; /* Setting the font to bold */
+      }
+      .plan-price {
+        font-weight: bold;
+        font-size: 30px; /* Increasing the font size for this class */
+      }
+      .plan-features {
+        padding-left: 0; /* Needed this here to remove the space of the bullet points, otherwise centering the content still accounted for it and text appeared to far right*/
+      }
+      li {
+        list-style: none; /* removes the bullet points */
+        justify-content: center;
+      }
+      button {
+        background-color:orangered; /* or use a hex code like #FFA500 */
+        color: white; /* sets the text color to white for better contrast */
+        border: none; /* removes the default border */
+        padding: 5px 12px; /* adds space between text and border */
+        text-align: center; /* centers the text */
+        display: inline-block; /* ensures proper layout */
+        cursor: pointer; /* changes the mouse cursor when hovering over the button */
+        border-radius: 5px; /* adds rounded corners */
+      }
+      /* Hint: What can you do with a media query and flexbox? */
+      @media (max-width: 1250px) {
+        .pricing-container {
+          flex-direction: column; /* Setting the flexbox to column when the screen width is smaller than 1250 so containers appear on top of eachother now*/
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="pricing-container">
+      <div class="pricing-plan">
+        <div class="plan-title">Basic</div>
+        <div class="plan-price">$9.99/month</div>
+        <ul class="plan-features">
+          <li>✅ 10GB Storage</li>
+          <li>✅ 1 User</li>
+          <li>🚫 Support</li>
+        </ul>
+        <button class="plan-button">Sign Up</button>
+      </div>
+      <div class="pricing-plan">
+        <div class="plan-title">Standard</div>
+        <div class="plan-price">$19.99/month</div>
+        <ul class="plan-features">
+          <li>✅ 50GB Storage</li>
+          <li>✅ 5 Users</li>
+          <li>✅ Phone &amp; Email Support</li>
+        </ul>
+        <button class="plan-button">Sign Up</button>
+      </div>
+      <div class="pricing-plan">
+        <div class="plan-title">Premium</div>
+        <div class="plan-price">$49.99/month</div>
+        <ul class="plan-features">
+          <li>✅ 100GB Storage</li>
+          <li>✅ 10 Users</li>
+          <li>✅ 24/7 Support</li>
+        </ul>
+        <button class="plan-button">Sign Up</button>
+      </div>
+    </div>
+  </body>
+</html>

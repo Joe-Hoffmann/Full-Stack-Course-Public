@@ -1,0 +1,38 @@
+<%- include("partials/header.ejs") %>
+
+<% if (locals.blogText) {%>
+    <div class="row mb-2"> 
+        <div class="col-md-12"> 
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"> 
+                <div class="col p-4 d-flex flex-column position-static"> 
+                    <strong class="d-inline-block mb-2 text-primary-emphasis"><%= author %></strong> 
+                    <h3 class="mb-0"><%= title %></h3> 
+                    <div class="mb-1 text-body-secondary"><%= date %></div> 
+                    <p class="card-text mb-auto"><%= blogText %></p> 
+                    <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                        Continue reading
+                        <svg class="bi" aria-hidden="true">
+                            <use xlink:href="#chevron-right"></use>
+                        </svg> 
+                    </a> 
+                </div> 
+            </div> 
+        </div> 
+    </div>
+<% } else { %>
+    <div class="col-auto"><h2>No blogs at at this time</h2></div>
+<% } %> 
+
+<form action="/submit" method="POST" class="form-container">
+    <label for="title">Title: </label>
+    <input type="text" id="title" name="title" placeholder="Enter a title..." required>
+    <label for="author">Author: </label>
+    <input type="text" id="author" name="author" placeholder="Enter your name..." required>
+    <label for="date">Date: </label>
+    <input type="date" id="date" name="date" placeholder="mm/dd/yyyy" required>
+    <label for="blogText">Write your Blog: </label>
+    <textarea id="blogText" name="blogText" placeholder="Write your blog here..." required></textarea>
+    <input type="submit" value="Post to blog">
+</form>
+
+<%- include("partials/footer.ejs") %>
